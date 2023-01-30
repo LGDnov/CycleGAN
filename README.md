@@ -73,7 +73,8 @@ These parameters are set in the `config_ab.txt` file.
 
 The results of the CycleGAN training process can be found in the `images/` directory. This directory will contain images obtained during network training.
 
-![Gift](https://github.com/LGDnov/CycleGAN/gif/my_gif.gif)
+![Gift](https://github.com/LGDnov/CycleGAN/blob/main/gif/my_gif.gif)
+
 
 ## Acknowledgments
 
