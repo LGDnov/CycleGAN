@@ -55,6 +55,32 @@ The following are the input parameters for the parser:
 --batch_size: an integer that specifies the batch size for training.
 --workers: an integer that specifies the number of sub-processes to use for data loading.
 
+This is the description of the arguments used in the parser:
+
+--name : this is the name of the project
+
+--num_epochs : this is the number of epochs used for training the model
+
+--config : this is the configuration file path
+
+--data_train_first : this is the input data directory for the first training dataset
+
+--path_model : this is the directory for the models
+
+--data_train_second : this is the input data directory for the second training dataset
+
+--data_test_first : this is the input data directory for the first test dataset
+
+--data_test_second : this is the input data directory for the second test dataset
+
+--w_size : this is the resize image width
+
+--h_size : this is the resize image height
+
+--batch_size : this is the batch size used for training and testing
+
+--workers : this is the number of sub-processes used for data loading
+
 ## Results
 
 The results of the CycleGAN training process can be found in the `results/` directory. This directory contains two subdirectories, `A2B/` and `B2A/`, that contain the generated images from each domain.
