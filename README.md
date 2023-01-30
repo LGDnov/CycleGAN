@@ -39,21 +39,7 @@ python train_sgan.py --config config_ab.txt
 
 You can also specify other optional arguments to customize the training process. For a full list of available arguments, see the `load_data.py` file.
 
-## Sample
-
-The following are the input parameters for the parser: 
---name: a string that serves as the name of the project.
---num_epochs: an integer that specifies the number of epochs the model should run for.
---config: a boolean that indicates the configuration file path.
---data_train_first: a string that specifies the path to the first training dataset.
---path_model: a string that specifies the directory for the models.
---data_train_second: a string that specifies the path to the second training dataset.
---data_test_first: a string that specifies the path to the first test dataset.
---data_test_second: a string that specifies the path to the second test dataset.
---w_size: an integer that specifies the desired width for the images.
---h_size: an integer that specifies the desired height for the images.
---batch_size: an integer that specifies the batch size for training.
---workers: an integer that specifies the number of sub-processes to use for data loading.
+## Parameters for network training
 
 This is the description of the arguments used in the parser:
 ```
@@ -82,10 +68,35 @@ This is the description of the arguments used in the parser:
 --workers : this is the number of sub-processes used for data loading
 ```
 
+These parameters are set in the `config_ab.txt` file.
+
 ## Results
 
-The results of the CycleGAN training process can be found in the `results/` directory. This directory contains two subdirectories, `A2B/` and `B2A/`, that contain the generated images from each domain.
+The results of the CycleGAN training process can be found in the `images/` directory. This directory will contain images obtained during network training.
 
 ## Acknowledgments
 
-This implementation of CycleGAN is based on the work by [Jun-Yan Zhu et al.](https://arxiv.org/abs/1703.10593). This repository is maintained by [@username](https://github.com/username).
+This implementation of CycleGAN is based on the work by [Jun-Yan Zhu et al.](https://arxiv.org/abs/1703.10593). This repository is maintained by [@LGDnov](https://github.com/LGDnov).
+
+
+MIT License
+
+Copyright (c) [2020] [Cycle Gan]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
