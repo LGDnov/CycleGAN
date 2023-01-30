@@ -18,26 +18,42 @@ To train a CycleGAN model, you need to provide two datasets of images. Each data
 Example:
 
 ```
-data/
-    horses/
-        horse1.jpg
-        horse2.jpg
-        horse3.jpg
+dataset/
+    apple/
+        apple1.jpg
+        apple2.jpg
+        apple3.jpg
         ...
-    zebras/
-        zebra1.jpg
-        zebra2.jpg
-        zebra3.jpg
+    banana/
+        banana1.jpg
+        banana2.jpg
+        banana3.jpg
         ...
 ```
 
 Once you have your datasets prepared, you can run the training script to begin training a CycleGAN model:
 
 ```
-python train.py --data_dir data
+python train_sgan.py --config config_ab.txt
 ```
 
-You can also specify other optional arguments to customize the training process. For a full list of available arguments, see the `train.py` file.
+You can also specify other optional arguments to customize the training process. For a full list of available arguments, see the `load_data.py` file.
+
+## Sample
+
+The following are the input parameters for the parser: 
+--name: a string that serves as the name of the project.
+--num_epochs: an integer that specifies the number of epochs the model should run for.
+--config: a boolean that indicates the configuration file path.
+--data_train_first: a string that specifies the path to the first training dataset.
+--path_model: a string that specifies the directory for the models.
+--data_train_second: a string that specifies the path to the second training dataset.
+--data_test_first: a string that specifies the path to the first test dataset.
+--data_test_second: a string that specifies the path to the second test dataset.
+--w_size: an integer that specifies the desired width for the images.
+--h_size: an integer that specifies the desired height for the images.
+--batch_size: an integer that specifies the batch size for training.
+--workers: an integer that specifies the number of sub-processes to use for data loading.
 
 ## Results
 
