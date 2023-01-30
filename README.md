@@ -56,7 +56,7 @@ The following are the input parameters for the parser:
 --workers: an integer that specifies the number of sub-processes to use for data loading.
 
 This is the description of the arguments used in the parser:
-
+```
 --name : this is the name of the project
 
 --num_epochs : this is the number of epochs used for training the model
@@ -80,6 +80,7 @@ This is the description of the arguments used in the parser:
 --batch_size : this is the batch size used for training and testing
 
 --workers : this is the number of sub-processes used for data loading
+```
 
 ## Results
 
