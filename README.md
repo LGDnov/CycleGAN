@@ -4,12 +4,11 @@ This repository contains implementations of CycleGAN, a method for learning imag
 
 ## Prerequisites
 
-This implementation of CycleGAN requires Python 3.6 and a GPU. The following libraries and packages are also required:
+This implementation of CycleGAN requires Python 3.9 and a PyTorch. The following libraries and packages are also required:
 
-- TensorFlow 2.x
+- PyTorch
 - NumPy
 - Matplotlib
-- SciPy
 
 ## Usage
 
@@ -74,29 +73,8 @@ These parameters are set in the `config_ab.txt` file.
 
 The results of the CycleGAN training process can be found in the `images/` directory. This directory will contain images obtained during network training.
 
+![Gift](https://github.com/LGDnov/CycleGAN/gif/my_gif.gif)
+
 ## Acknowledgments
 
 This implementation of CycleGAN is based on the work by [Jun-Yan Zhu et al.](https://arxiv.org/abs/1703.10593). This repository is maintained by [@LGDnov](https://github.com/LGDnov).
-
-
-MIT License
-
-Copyright (c) [2020] [Cycle Gan]
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
