@@ -1,0 +1,8 @@
+name = aple_and_banana
+num_epochs = 100
+data_train_first
+
+data_train_first = /dataset/apple_train
+data_test_first = /dataset/apple_test
+data_train_second = dataset/banana_train
+data_test_second = /dataset/banana_test
