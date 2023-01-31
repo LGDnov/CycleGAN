@@ -6,8 +6,8 @@ from net import Discriminator
 from net import LSGAN_D
 from net import LSGAN_G
 from net import save_models
+from net import load_models
 import random
-#from net import load_models
 import torch
 
 
@@ -199,11 +199,15 @@ if __name__ == "__main__":
     dataloader_test_first = dataloader(args.data_test_first, (args.w_size,args.h_size), args.workers, args.batch_size)
     dataloader_test_second = dataloader(args.data_test_second, (args.w_size,args.h_size), args.workers, args.batch_size)
 
-    #Model create
-    G_A2B = Generator().to(device)
-    G_B2A = Generator().to(device)
-    D_A = Discriminator().to(device)
-    D_B = Discriminator().to(device)
+    if args.load_model_path is not None and args.load_model_path != 'None' and args.load_model_name is not None:
+      load_model_path = args.load_model_path
+      G_A2B, G_B2A, D_A, D_B = load_models(args.load_model_name, device, load_model_path)
+    else:
+      #Model create
+      G_A2B = Generator().to(device)
+      G_B2A = Generator().to(device)
+      D_A = Discriminator().to(device)
+      D_B = Discriminator().to(device)
 
     # Initialize Loss function
     criterion_Im = torch.nn.L1Loss() 

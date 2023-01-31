@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+import os
 
 nc=3
 ndf=64
@@ -68,11 +69,15 @@ def LSGAN_G(fake):
   return  torch.mean((fake - 1)**2)
 
 def save_models(G_A2B, G_B2A, D_A, D_B, name, path_model):
-
-  torch.save(G_A2B, path_model+name+"_G_A2B.pt")
-  torch.save(G_B2A, path_model+name+"_G_B2A.pt")
-  torch.save(D_A, path_model+name+"_D_A.pt")
-  torch.save(D_B, path_model+name+"_D_B.pt")
+    if not os.path.exists(path_model):
+        os.mkdir(path_model)
+        print("Folder created "+path_model)
+    else:
+        print("Folder already exists "+path_model)
+    torch.save(G_A2B, path_model+name+"_G_A2B.pt")
+    torch.save(G_B2A, path_model+name+"_G_B2A.pt")
+    torch.save(D_A, path_model+name+"_D_A.pt")
+    torch.save(D_B, path_model+name+"_D_B.pt")
 
 def load_models(name, device, path_model):
 
