@@ -66,7 +66,6 @@ This is the description of the arguments used in the parser:
 
 --workers : this is the number of sub-processes used for data loading
 
-
 --load_model_path: Specifies the path to load a pre-trained model.
 
 --load_model_name: Specifies the name of the pre-trained model to be loaded.
